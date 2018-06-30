@@ -23,19 +23,11 @@ class QuotesApp extends React.Component {
 
   //state = { author: '', quote: '' };
 
-  handleGetQuote() {
-
-  }
-
-  handleTweetQuote() {
-
-  }
-
-
   async componentWillMount() {
     try {
       const obj = callQuotesAPI();
       const data = await obj;
+      console.log(data);
       if (data) {
         this.setState(() => ({
           author: data.author,
@@ -43,6 +35,21 @@ class QuotesApp extends React.Component {
         }));
       }
     } catch (e) { }
+  }
+
+  async handleGetQuote() {
+    const data = await callQuotesAPI();
+    console.log(data);
+    if (data) {
+      this.setState(() => ({
+        author: data.author,
+        quote: data.quote
+      }));
+    }
+  }
+
+  handleTweetQuote() {
+
   }
 
   render() {
