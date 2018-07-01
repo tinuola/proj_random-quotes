@@ -7,7 +7,7 @@ const ButtonRow = {
 
 const GetQuote = props => (
   <div style={ButtonRow}>
-    <button onClick={props.handleGetQuote}>Get a Quote</button>
+    <button onClick={props.handleGetNewQuote}>Get a Quote</button>
     <button onClick={props.handleTweetQuote}>Tweet a Quote</button>
   </div>
 )
