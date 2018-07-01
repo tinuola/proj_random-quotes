@@ -21,13 +21,10 @@ class QuotesApp extends React.Component {
     }
   }
 
-  //state = { author: '', quote: '' };
-
   async componentWillMount() {
     try {
       const obj = callQuotesAPI();
       const data = await obj;
-      console.log(data);
       if (data) {
         this.setState(() => ({
           author: data.author,
@@ -39,7 +36,6 @@ class QuotesApp extends React.Component {
 
   async handleGetQuote() {
     const data = await callQuotesAPI();
-    console.log(data);
     if (data) {
       this.setState(() => ({
         author: data.author,
@@ -49,7 +45,8 @@ class QuotesApp extends React.Component {
   }
 
   handleTweetQuote() {
-
+    let quote = this.state.quote;
+    window.open(`http://twitter.com/home?status=${quote} @freecodecamp`);
   }
 
   render() {
