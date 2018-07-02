@@ -1,8 +1,7 @@
 import React from 'react';
 
 const ButtonRow = {
-  display: 'flex',
-  flexDirection: 'column'
+  margin: '0 auto'
 }
 
 const GetQuote = props => (
