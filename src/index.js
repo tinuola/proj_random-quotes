@@ -4,5 +4,5 @@ import './index.css';
 import QuotesApp from './components/QuotesApp';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<QuotesApp />, document.getElementById('root'));
+ReactDOM.render(<QuotesApp />, document.getElementById('app'));
 registerServiceWorker();

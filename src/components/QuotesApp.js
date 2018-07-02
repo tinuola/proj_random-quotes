@@ -3,11 +3,14 @@ import Author from './Author';
 import Quote from './Quote';
 import GetQuote from './GetQuote';
 import callQuotesAPI from '../util/QuotesAPI';
-import '../styles/style.css';
 
 const MainDisplay = {
+  width: '100%',
+  minHeight: '100vh',
   display: 'flex',
-  flexDirection: 'row'
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center'
 }
 
 class QuotesApp extends React.Component {
@@ -47,7 +50,7 @@ class QuotesApp extends React.Component {
 
   render() {
     return (
-      <div style={MainDisplay} className='app'>
+      <div style={MainDisplay}>
         <Author authorName={this.state.author} />
         <Quote quote={this.state.quote} />
         <GetQuote handleGetNewQuote={this.handleGetNewQuote} handleTweetQuote={this.handleTweetQuote} />
