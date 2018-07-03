@@ -6,12 +6,13 @@ import callQuotesAPI from '../util/QuotesAPI';
 
 const MainDisplay = {
   width: '100%',
-  minHeight: '100vh',
+  minHeight: '75vh',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center'
 }
+
 
 class QuotesApp extends React.Component {
   constructor(props) {
@@ -20,7 +21,8 @@ class QuotesApp extends React.Component {
     this.handleGetNewQuote = this.handleGetNewQuote.bind(this);
     this.handleTweetQuote = this.handleTweetQuote.bind(this);
     this.state = {
-      author: '',
+      authorFirstName: '',
+      authorLastName: '',
       quote: ''
     }
   }
@@ -29,7 +31,8 @@ class QuotesApp extends React.Component {
     const data = await callQuotesAPI();
     if (data) {
       this.setState(() => ({
-        author: data.author,
+        authorFirstName: data.authorFirstName,
+        authorLastName: data.authorLastName,
         quote: data.quote
       }));
     }
@@ -51,7 +54,7 @@ class QuotesApp extends React.Component {
   render() {
     return (
       <div style={MainDisplay}>
-        <Author authorName={this.state.author} />
+        <Author authorFirstName={this.state.authorFirstName} authorLastName={this.state.authorLastName} />
         <Quote quote={this.state.quote} />
         <GetQuote handleGetNewQuote={this.handleGetNewQuote} handleTweetQuote={this.handleTweetQuote} />
       </div>
