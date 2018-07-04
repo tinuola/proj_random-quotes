@@ -1,7 +1,7 @@
 const url = 'https://talaikis.com/api/quotes/random/'
 
 const nameSplit = (str) => {
-  let pattern = /^\b\w+\.*\w\.?|\w\.?/;
+  let pattern = /^\w*\.?\s?\w\.|\w*/;
   let firstNm = str.match(pattern)[0];
   let lastNm = str.split(firstNm).join("").trim();
   return [firstNm, lastNm];
