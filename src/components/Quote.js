@@ -2,7 +2,6 @@ import React from 'react';
 
 const QuoteDisplayBox = {
   boxSizing: "border-box",
-  // background: 'red',
   margin: '0 auto 25px auto',
   width: '500px',
   maxWidth: '100%',
