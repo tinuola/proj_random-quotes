@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AuthorDisplay = {
+  boxSizing: "border-box",
   margin: '0 auto'
 }
 
