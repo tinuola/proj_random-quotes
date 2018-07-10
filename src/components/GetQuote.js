@@ -14,7 +14,7 @@ const ButtonRow = {
 const icons = {
   color: '#6f6f6f',
   marginRight: '25px',
-  border: '3px solid #6f6f6f',
+  border: '2px solid #6f6f6f',
   borderRadius: '35px',
   padding: '20',
   cursor: 'pointer'
@@ -22,8 +22,8 @@ const icons = {
 
 const GetQuote = props => (
   <div style={ButtonRow}>
-    <FontAwesomeIcon icon="redo" size="2x" onClick={props.handleGetNewQuote} style={icons} />
-    <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" onClick={props.handleTweetQuote} style={icons} />
+    <FontAwesomeIcon icon="redo" size="1x" onClick={props.handleGetNewQuote} style={icons} />
+    <FontAwesomeIcon icon={['fab', 'twitter']} size="1x" onClick={props.handleTweetQuote} style={icons} />
 
   </div>
 )
