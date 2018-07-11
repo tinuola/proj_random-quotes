@@ -2,6 +2,8 @@ import React from 'react';
 import Author from './Author';
 import Quote from './Quote';
 import GetQuote from './GetQuote';
+import TweetQuote from './TweetQuote';
+import Footer from './Footer';
 import callQuotesAPI from '../util/QuotesAPI';
 
 const MainDisplay = {
@@ -13,6 +15,11 @@ const MainDisplay = {
   alignItems: 'center'
 }
 
+const ButtonRow = {
+  boxSizing: "border-box",
+  margin: '0 auto',
+  display: 'flex'
+}
 
 class QuotesApp extends React.Component {
   constructor(props) {
@@ -56,7 +63,11 @@ class QuotesApp extends React.Component {
       <div style={MainDisplay}>
         <Author authorFirstName={this.state.authorFirstName} authorLastName={this.state.authorLastName} />
         <Quote quote={this.state.quote} />
-        <GetQuote handleGetNewQuote={this.handleGetNewQuote} handleTweetQuote={this.handleTweetQuote} />
+        <div style={ButtonRow}>
+          <GetQuote handleGetNewQuote={this.handleGetNewQuote} />
+          <TweetQuote handleTweetQuote={this.handleTweetQuote} />
+        </div>
+        <Footer />
       </div>
     )
   }

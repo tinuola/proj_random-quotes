@@ -6,14 +6,14 @@ const QuoteDisplayBox = {
   width: '500px',
   maxWidth: '100%',
   minHeight: '200px',
-  padding: '0 1.5em',
+  padding: '0 1.5rem',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center'
 }
 
 const QuoteText = {
-  fontSize: '1.5em'
+  fontSize: '1.4rem'
 }
 
 const Quote = props => (
