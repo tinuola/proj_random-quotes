@@ -1,9 +1,9 @@
 import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRedo } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faRedo)
+library.add(fab)
 
 const icons = {
   color: '#6f6f6f',
@@ -14,7 +14,7 @@ const icons = {
   cursor: 'pointer'
 }
 
-class GetQuote extends React.Component {
+class TweetQuote extends React.Component {
   constructor(props) {
     super(props);
     this.toggleHover = this.toggleHover.bind(this);
@@ -36,9 +36,9 @@ class GetQuote extends React.Component {
 
     return (
       <div>
-        <FontAwesomeIcon icon="redo"
+        <FontAwesomeIcon icon={['fab', 'twitter']}
           size="1x"
-          onClick={this.props.handleGetNewQuote}
+          onClick={this.props.handleTweetQuote}
           style={{ ...icons, ...hoverStyle }}
           onMouseEnter={this.toggleHover}
           onMouseLeave={this.toggleHover}
@@ -46,6 +46,7 @@ class GetQuote extends React.Component {
       </div>
     )
   }
+
 }
 
-export default GetQuote;
+export default TweetQuote;
